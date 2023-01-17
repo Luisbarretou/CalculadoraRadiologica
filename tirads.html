@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Radiológica</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
+
+    <!--FontAwesome 6.2.1-->
+    <link rel="stylesheet" href="assets/fontawesome-6.2.1/css/all.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__navbar">
+            <a href="index.html" class="header__navbar-link">
+                <img class="header__navbar-link logo-icon" src="assets/images/logo.png" alt="LEES">
+            </a>
+            <h1 class="header__navbar-title">LEES</h1>
+            <span class="header__navbar-btnmenu" id="btnMenu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </div>   
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav-link">
+                <img class="header__nav-link logo-icon" src="assets/images/logo.png" alt="LEES">
+            </a>
+            <ul class="menu" id="menu">
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link">
+                        <i class="menu__icon fa fa-house"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">
+                        <i class="menu__icon fa fa-calculator"></i>
+                        <p>Calculadoras</p> <i class="desplegable fa fa-angle-down d-inline"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="tirads.html" class="submenu__link active"><p>ACR TI-RADS</p></a></li>
+                        <li class="submenu__item"><a href="pirads.html" class="submenu__link"><p>PI-RADS V2.1</p></a></li>
+                        <li class="submenu__item"><a href="hierro.html" class="submenu__link"><p>RM HIERRO</p></a></li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a href="medidas.html" class="menu__link">
+                        <i class="menu__icon fa fa-ruler-combined"></i>
+                        <p>Medidas</p>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="guias.html" class="menu__link">
+                        <i class="menu__icon fa fa-file"></i>
+                        <p>Guías</p>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="contacto.html" class="menu__link">
+                        <i class="menu__icon fa fa-envelope"></i>
+                        <p>Contacto</p>
+                    </a>
+                </li>
+                <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+                    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-10" viewBox="0 0 40 40">
+                        <path d="M15.643 31.285c8.64 0 15.642-7.003 15.642-15.642C31.285 7.003 24.282 0 15.643 0 7.003 0 0 7.003 0 15.643s7.003 15.642 15.643 15.642zm0-3.91c6.48 0 11.732-5.253 11.732-11.732 0-6.48-5.253-11.732-11.732-11.732-6.48 0-11.732 5.253-11.732 11.733s5.253 11.732 11.733 11.732zm12.605 4.192c-.914-.915-.92-2.393.004-3.315.916-.917 2.402-.917 3.315-.004l7.75 7.75c.913.914.918 2.392-.004 3.315-.917.916-2.403.916-3.316.003l-7.75-7.75zm-9.92-25.05c-5.26-1.213-10.51 2.067-11.725 7.328-.146.63.248 1.26.88 1.407.63.146 1.26-.248 1.406-.88.923-3.998 4.912-6.49 8.91-5.568.632.146 1.262-.247 1.408-.88.145-.63-.248-1.26-.88-1.406z"
+                        fill-rule="evenodd" />
+                    </symbol>
+                </svg>
+                <form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-custom">
+                    <div role="search" class="sbx-custom__wrapper">
+                        <input type="search" name="search" placeholder="Buscar" autocomplete="off" required="required" class="sbx-custom__input">
+                        <button type="submit" title="Submit your search query." class="sbx-custom__submit">
+                            <svg role="img" aria-label="Search">
+                                <use xlink:href="#sbx-icon-search-10"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="content__btn">
+                    <a href="registrarse.html" class="content__btn__link btn-registro">Registrarse</a>
+                    <a href="iniciar_Sesion.html" class="content__btn__link btn-inicio">Iniciar sesion</a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__section">
+            <article class="section__article">
+                
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__group">
+            <div class="footer__group__box">
+                <figure>
+                    <a href="index.html">
+                        <img src="https://leesmed.com/wp-content/uploads/elementor/thumbs/logo-sin-borde-01-1-ponzgub9i201vrwromrjoxlsaf8zjfdxqpvl1ka0qs.png" alt="Logo-LEES">
+                    </a>
+                </figure>
+            </div>
+            <div class="footer__group__box">
+                <figure>
+                    <a href="index.html">
+                        <img src="https://leesmed.com/wp-content/uploads/elementor/thumbs/inicio-19-2-pom1u77i28lirey3pmeyvz4n0461p96y3zs1eawg6g.png" title="DNA-USP" alt="DNA-USP">
+                    </a>
+                </figure>
+            </div>
+            <div class="footer__group__box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/leesmedic" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/leesmedic/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/leesmedic/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <small>&copy; 2023 Radiological calculator | Powered by LEES</small>
+        </div>
+    </footer>
+
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/app.js" defer></script>
+
+    <!--FontAwesome 6.2.1-->
+    <script src="assets/fontawesome-6.2.1/js/all.js"></script>
+</body>
+</html>
