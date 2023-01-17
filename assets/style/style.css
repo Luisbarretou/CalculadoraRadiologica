@@ -46,6 +46,11 @@ b {
     align-items: center;
 }
 
+.header__nav {
+    position: relative;
+    z-index: 200;
+}
+
 .logo-icon {
     width: 4em;
 }
