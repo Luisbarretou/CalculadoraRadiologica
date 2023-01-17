@@ -1227,3 +1227,16 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
         font-size: 13px;
     }
 }
+
+
+/* TI-RADS */
+.section__article h1 {
+    color: #0066FF;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+
+
+
