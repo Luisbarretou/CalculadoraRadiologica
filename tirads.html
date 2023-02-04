@@ -87,14 +87,328 @@
         </nav>
     </header>
     <main class="main">
-        <section class="main__section">
-            <article class="section__article">
-                <h1>Calculadora TI-RAD</h1>
+        <h1>Calculadora TI-RADS</h1>
+        <section class="main-tirads__section">
+            <article class="section-tirads__article">
+                <label class="tirads-title">Ubicación</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio2" value="option2">
+                                Superior
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio3" value="option3">
+                                Medio
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio4" value="option4">
+                                Inferior
+                            </label>
+                            <label class="tirads-ubicacion__label">
+                                Lobo derecho
+                            </label>
+                        </div>
+                        <div class="content-tirads__column">
+                            <label style="text-align: center;">
+                                <input type="radio" name="radio" id="checkRadio1" value="option1">
+                                Istmo
+                            </label>
+                            <img class="content-tirads-column__img-ubicacion" src="/assets/images/tirads_ubicacion.png" alt="tirads_ubicacion">
+                        </div>
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio6" value="option5">
+                                Superior
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio7" value="option6">
+                                Medio
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" id="checkRadio8" value="option7">
+                                Inferior
+                            </label>
+                            <label class="tirads-ubicacion__label">
+                                Lobo izquierdo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="section-tirads__article">
+                <label class="tirads-title">Medidas</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-row">
+                        <div class="content-tirads__row">
+                            <label>Longitud:</label>
+                            <input type="number" name="" id="">
+                            <label>cm.</label>
+                        </div>
+                        <div class="content-tirads__row">
+                            <label>Alto:</label>
+                            <input type="number" name="" id="" >
+                            <label>cm.</label>
+                        </div>
+                        <div class="content-tirads__row">
+                            <label>Ancho:</label>
+                            <input type="number" name="" id="" >
+                            <label>cm.</label>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
-        
+        <section class="main-tirads__section">
+            <article class="section-tirads__article">
+                <label class="tirads-title">Composición</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-composicion">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioComposicion" id="checkRadioComposicion1" value="optionComposicion1">
+                                Quístico o casi completament quístico (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioComposicion" id="checkRadioComposicion2" value="optionComposicion2">
+                                Espongiforme (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioComposicion" id="checkRadioComposicion3" value="optionComposicion3">
+                                Mixto sólido-quístico (1)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioComposicion" id="checkRadioComposicion4" value="optionComposicion4">
+                                Sólido o casi completamente sólido (2)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioComposicion" id="checkRadioComposicion5" value="optionComposicion5">
+                                Indeterminado debido a la calcificación (2)
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                            <label class="lbl-puntos">
+                                Puntos:
+                                <input type="number" name="" id="" placeholder="2" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="section-tirads__article">
+                <label class="tirads-title">Calcificaciones</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-calcificaciones">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioCalcificaciones" id="checkRadioCalcificaciones1" value="optionCalcificaciones1">
+                                Ninguno o con cola de cometa (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioCalcificaciones" id="checkRadioCalcificaciones2" value="optionCalcificaciones2">
+                                Macrocalcificaciones (1)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioCalcificaciones" id="checkRadioCalcificaciones3" value="optionCalcificaciones3">
+                                Periférico (2)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioCalcificaciones" id="checkRadioCalcificaciones4" value="optionCalcificaciones4">
+                                Puntiforme (3)
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                            <label class="lbl-puntos">
+                                Puntos:
+                                <input type="number" name="" id="" placeholder="1" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-tirads__section">
+            <article class="section-tirads__article">
+                <label class="tirads-title">Márgenes</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-composicion">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioMargenes" id="checkRadioMargenes1" value="optionMargenes1">
+                                Bien definido (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioMargenes" id="checkRadioMargenes2" value="optionMargenes2">
+                                Mal definido (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioMargenes" id="checkRadioMargenes3" value="optionMargenes3">
+                                Lobulado o irregular (2)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioMargenes" id="checkRadioMargenes4" value="optionMargenes4">
+                                Extensión extratiroidea (3)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioMargenes" id="checkRadioMargenes5" value="optionMargenes5">
+                                Indeterminado (0)
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                            <label class="lbl-puntos">
+                                Puntos:
+                                <input type="number" name="" id="" placeholder="0" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="section-tirads__article">
+                <label class="tirads-title">Ecogenicidad</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-composicion">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioEcogenicidad" id="checkRadioEcogenicidad1" value="optionEcogenicidad1">
+                                Anecoico (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioEcogenicidad" id="checkRadioEcogenicidad2" value="optionEcogenicidad2">
+                                Hiperecoico o isoecoico (1)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioEcogenicidad" id="checkRadioEcogenicidad3" value="optionEcogenicidad3">
+                                Hipoecoico (2)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioEcogenicidad" id="checkRadioEcogenicidad4" value="optionEcogenicidad4">
+                                Agudamente hipoecoico (3)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioEcogenicidad" id="checkRadioEcogenicidad5" value="optionEcogenicidad5">
+                                Indeterminado (1)
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                            <label class="lbl-puntos">
+                                Puntos:
+                                <input type="number" name="" id="" placeholder="3" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-tirads__section">
+            <article class="section-tirads__article">
+                <label class="tirads-title">Formato</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-formato">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioFormato" id="checkRadioFormato1" value="optionFormato1">
+                                Eje más grande paralelo a la piel (0)
+                            </label>
+                            <label>
+                                <input type="radio" name="radioFormato" id="checkRadioFormato2" value="optionFormato2">
+                                Eje más grande perpendicular a la piel (3)
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                            <label class="lbl-puntos">
+                                Puntos:
+                                <input type="number" name="" id="" placeholder="0" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="section-tirads__article">
+                <label class="tirads-title">Chammas de vascularización</label>
+                <div class="article-tirads__border">
+                    <div class="article-tirads__content-chammas">
+                        <div class="content-tirads__column">
+                            <label>
+                                <input type="radio" name="radioChammas" id="checkRadioChammas1" value="optionChammas1">
+                                I: Ausencia de vascularización
+                            </label>
+                            <label>
+                                <input type="radio" name="radioChammas" id="checkRadioChammas2" value="optionChammas2">
+                                II: Sólo periférico
+                            </label>
+                            <label>
+                                <input type="radio" name="radioChammas" id="checkRadioChammas3" value="optionChammas3">
+                                III: Periférico mayor o igual que central
+                            </label>
+                            <label>
+                                <input type="radio" name="radioChammas" id="checkRadioChammas4" value="optionChammas4">
+                                IV: Central más grande que periférica
+                            </label>
+                            <label>
+                                <input type="radio" name="radioChammas" id="checkRadioChammas5" value="optionChammas5">
+                                V: Sólo central
+                            </label>
+                        </div>
+                        <div class="content-tirads__info">
+                            <a class="btn-info" href="#">
+                                Mas informacion
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-tirads__section">
+            <article class="section-tirads__article-puntaje">
+                <label class="tirads-title">Puntaje total</label>
+                <div class="article-tirads__border-puntaje">
+                    <div class="article-tirads__content-puntaje">
+                        <div class="content-tirads__column-puntaje">
+                            <h2>
+                                ACR-TIRADS: <p class="content-tirads__text-puntaje">5</p>
+                            </h2>
+                            <h3>
+                                Características 
+                            </h3>
+                            <p class="caracteristicas">Muy sospechoso. ANAB >= 1,0 cm. > de seguimiento = 0,5 cm.</p>
+                        </div>
+                        <div class="content-tirads__column-text">
+                            <h2>
+                                Resultado sugerido: 
+                            </h2>
+                            <p>
+                                Nódulo de composición indeterminada, marcadamente hipoecoico, 
+                                de márgenes lobulados, eje mayor perpendicular a la piel, con calcificaciones puntiformes, 
+                                situado en el tercio medio del lóbulo derecho, de 1 x 2 x 3 cm (ACR-TIRADS: 5). 
+                                El estudio Doppler muestra únicamente vascularización periférica (Chammas II).
+                            </p>
+                            <div class="content-tirads__copy">
+                                <a class="btn-copy" href="#">
+                                    Copiar resultado
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
-    
     <footer class="footer">
         <div class="footer__group">
             <div class="footer__group__box">
