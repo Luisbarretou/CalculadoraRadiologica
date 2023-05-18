@@ -80,19 +80,201 @@
                     </div>
                 </form>
                 <div class="content__btn">
-                    <a href="registrarse.html" class="content__btn__link btn-registro">Registrarse</a>
-                    <a href="iniciar_Sesion.html" class="content__btn__link btn-inicio">Iniciar sesion</a>
+                    <a href="#" class="content__btn__link btn-registro">Registrarse</a>
+                    <a href="#" class="content__btn__link btn-inicio">Iniciar sesion</a>
                 </div>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <section class="main__section">
-            <article class="section__article">
-                <p id="descripcion">
-                    PI RADS
-                </p>
-            </article>
+        <h1>Calculadora PI-RADS</h1>
+        <div class="container-aviso">
+            <p id="aviso-notificacion">Esta calculadora se basa en el Colegio Americano de Radiología (ACR), la Fundación AdMeTech y la Sociedad Europea de Radiología Urogenital (ESUR) Sistema de datos e informes de imágenes de próstata (PI-RADS), sin embargo, no cuenta con el apoyo ni el respaldo de la organización antes mencionada.</p>
+        </div>
+        <section class="main-pirads__section">
+            <label class="calculator-title">Localización de la lesión</label>
+            <div class="section-pirads__border">
+                <div class="section-pirads__content">
+                    <div class="content-pirads__localizacion">
+                        <div class="content-pirads__column">
+                            <div class="localizacion-content">
+                                <label onclick="zonaPeriferica()">
+                                    <input class="radio-input" type="radio" name="radioLocalizacion"  value="Zona periférica" >
+                                    Zona periférica
+                                    <div class="localizacion-color" id="periferica"></div>
+                                </label>
+                            </div>
+                            <div class="localizacion-content">
+                                <label onclick="zonaTransicion()">
+                                    <input class="radio-input" type="radio" name="radioLocalizacion" value="Zona de transición">
+                                    Zona de transición
+                                    <div class="localizacion-color" id="transicion"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="content-pirads__column">
+                            <img src="/assets/images/pirads.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-pirads__section" id="dwi">
+            <label class="calculator-title">DWI Y ADC</label>
+            <div class="section-pirads__border">
+                <div class="section-pirads__content">
+                    <div class="content-pirads__row">
+                        <label onclick="zonaPeriferica()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="NO presenta anormalidad en ADC y DWI de alto valor 'b'." id="1" >
+                            Sin anormalías en ADC o DWI de alto valor "b"
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="zonaPeriferica()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="con apariencia lineal/en forma de cuña con hipointensidad en ADC y/o hiperintesidad en DWI de alto valor 'b'." id="2">
+                            Lineal/en forma de cuña, hipointensidad en ADC y/o hiperintensidad en DWI de alto valor "b"
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="contrasteDinamicoDwi()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="con apariencia focal(discreto y diferente del fondo) con hipointesidad leve o moderada en ADC y/o con hiperintensidad leve o moderada en DWI de alto valor 'b', " id="3">
+                            Focal(<i>discreta y diferente de la de fondo</i>), hipointensidad leve/moderada en ADC y/o hiperintensidad leve/moderada en DWI de alto valor "b"; puede ser marcadamente hipointenso en ADC o marcadamente hiperintenso en DWI de alto valor "b", pero no ambos
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="zonaPeriferica()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="con apariencia focal con hipointensidad marcada en ADC e hiperintensidad marcada en DWI de alto valor 'b', menor a 1.5cm en imágenes axiales." id="4">
+                            Focal, hipointensidad marcada en ADC e hiperintensidad marcada en DWI de alto valor "b"; < 1.5cm en la dimensión más grande
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="zonaPeriferica()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="con apariencia igual que PIRADS 4 pero mayor/igual a 1.5cm en su mayor dimensión o extensión extraprostática definida/comportamiento invasivo." id="5">
+                            Igual que 4 pero >= 1.5cm en su mayor dimensión o extensión extraprostática definida/comportamiento invasivo
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="dwiAusente()">
+                            <input class="radio-input" type="radio" name="radioDWI" value="con apariencia ausente en DWI, en TW2I " id="0">
+                            Inadecuado o ausente
+                        </label>
+                    </div>
+                    <div class="content-pirads__info">
+                        <a class="btn-info" id="infoDWI">
+                            Mas informacion
+                        </a>
+                        <label class="lbl-puntos">
+                            Puntos:
+                            <input type="number" name="" id="DWIPuntos" disabled>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-pirads__section" id="t2wi">
+            <label class="calculator-title">T2WI - Zona de transición</label>
+            <div class="section-pirads__border">
+                <div class="section-pirads__content">
+                    <div class="content-pirads__row">
+                        <label onclick="dwiAusente()">
+                            <input class="radio-input" type="radio" name="radioT2WI" value="presenta apariencia normal o presenta un nódulo redondo completamente encapsulado('nódulo típico')." id="1">
+                            Zona de transición de apariencia normal (rara) o un nódulo redondo completamente encapsulado ("nódulo típico" de hiperplasia prostática benigna)
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="dwiAusente()">
+                            <input class="radio-input" type="radio" name="radioT2WI" value="presenta un nódulo circunscrito homogéneo sin encapsulación('nódulo atípico') o un área homogénea levemente hipointensa entre nódulos." id="2">
+                            Un nódulo mayormente encapsulado o un nódulo circunscrito homogéneo sin encapsulación ("nódulo atípico"), o un área homogénea levemente hipointensa entre nódulos
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="contrasteDinamicoT2wi()">
+                            <input class="radio-input" type="radio" name="radioT2WI" value="presenta intensidad de señal heterogénea con márgenes oscrurecidos, " id="3">
+                            Intensidad de señal heterogénea con márgenes oscurecidos; Incluye otros que no califican como 2, 4 o 5
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="dwiAusente()">
+                            <input class="radio-input" type="radio" name="radioT2WI" value="presenta apariencia lenticular o no circunscrita, homogénea, moderadamente hipointensa y menor a 1.5cm en su mayor dimensión." id="4">
+                            Lenticular o no circunscrito, homogéneo, moderadamente hipointenso y < 1,5 cm en su mayor dimensión
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label onclick="dwiAusente()">
+                            <input class="radio-input" type="radio" name="radioT2WI" value="presenta apariencia igual que PIRADS 4 pero ≥1,5 cm en su mayor dimensión o extensión extraprostática definida/comportamiento invasivo." id="5">
+                            Igual que 4, pero ≥1,5 cm en su mayor dimensión o extensión extraprostática definida/comportamiento invasivo
+                        </label>
+                    </div>
+                    <div class="content-pirads__info">
+                        <a class="btn-info" id="infoT2WI">
+                            Mas informacion
+                        </a>
+                        <label class="lbl-puntos">
+                            Puntos:
+                            <input type="number" name="" id="T2WIPuntos" disabled>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-pirads__section" id="contrasteDinamico">
+            <label class="calculator-title">Mejora del contraste dinámico</label>
+            <div class="section-pirads__border">
+                <div class="section-pirads__content">
+                    <div class="content-pirads__row">
+                        <label>
+                            <input class="radio-input" type="radio" name="radioContraste" value="ninguna mejora temprana o contemporánea, o realce multifocal difuso que NO corresponde a un hallazgo focal sobre T2WI y/o DWI." id="0" >
+                            Negativo o inadecuado
+                        </label>
+                    </div>
+                    <div class="content-pirads__row">
+                        <label>
+                            <input class="radio-input" type="radio" name="radioContraste" value="focal y/o simultáneamente con la mejora de los tejidos prostáticos, normales adyacentes, correspondiente a un hallazgo sospechoso en T2WI y/o DWI." id="1">
+                            Positivo
+                        </label>
+                    </div>
+                    <div class="content-pirads__info">
+                        <a class="btn-info" id="infoContraste">
+                            Mas informacion
+                        </a>
+                        <label class="lbl-puntos">
+                            Puntos:
+                            <input type="number" name="" id="contrastePuntos" disabled>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="content-btn">
+            <a class="btn-generate" id="btnResultPirads">
+                Generar resultado
+            </a>
+        </div>
+        <section class="main-pirads__section">
+            <label class="calculator-title">Puntaje Total</label>
+            <div class="section-pirads__border">
+                <div class="section-pirads__content-puntaje">
+                    <div class="content-pirads__puntaje">
+                        <h2>
+                            PI-RADS v2.1: <p class="content-pirads__text-puntaje" id="resultadoPI"></p>
+                        </h2>
+                        <a class="btn-info" id="infoPirads">
+                            Mas informacion
+                        </a>
+                    </div>
+                    <div class="content-pirads__puntaje">
+                        <h3>
+                            Resultado sugerido: 
+                        </h3>
+                        <textarea name="" id="resultadoPirads" cols="" rows="" readonly></textarea>
+                        <div class="content-btn">
+                            <a class="btn-copy" id="btnCopyPirads">
+                                Copiar resultado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -126,9 +308,12 @@
     </footer>
 
     <!-- <script src="assets/js/bootstrap.min.js"></script> -->
-    <script src="assets/js/app.js" defer></script>
-
+    <script src="assets/js/app.js"></script>
+    
     <!--FontAwesome 6.2.1-->
     <script src="assets/fontawesome-6.2.1/js/all.js"></script>
+
+    <!--Sweet alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
