@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="101643cb-11dc-4030-8f03-034a3570b0f6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guias.html" beforeDir="false" afterPath="$PROJECT_DIR$/guias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hierro.html" beforeDir="false" afterPath="$PROJECT_DIR$/hierro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iniciar_Sesion.html" beforeDir="false" afterPath="$PROJECT_DIR$/iniciar_Sesion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medidas.html" beforeDir="false" afterPath="$PROJECT_DIR$/medidas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pirads.html" beforeDir="false" afterPath="$PROJECT_DIR$/pirads.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrarse.html" beforeDir="false" afterPath="$PROJECT_DIR$/registrarse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tirads.html" beforeDir="false" afterPath="$PROJECT_DIR$/tirads.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2PyCNpk76PoFOljrGlOmAZta5xi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="101643cb-11dc-4030-8f03-034a3570b0f6" name="Changes" comment="" />
+      <created>1684419897725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684419897725</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
