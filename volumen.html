@@ -88,13 +88,137 @@
         </nav>
     </header>
     <main class="main">
-        <section class="main__section">
-            <div id="container-working">
-                <label id="working-label">Volumen</label>
-                <img id="working-svg" src="assets/images/working.svg" alt="">
-            </div>
-            <!-- <article class="section__article">
-            </article> -->
+        <h1>Calculadora Volumen Radiológico</h1>
+        <div class="container-aviso">
+            <p id="aviso-notificacion">Descargo de responsabilidad: Esta información es solo para fines educativos y no sustituye el juicio clínico. calculadoraradiologica.com no hace ninguna afirmación de la exactitud de la información contenida en este documento.</p>
+        </div>
+        <section class="main-volumen__section">
+            <article class="section-volumen__article">
+                <label class="calculator-title">Tipos</label>
+                <div class="article-volumen__border">
+                    <div class="article-volumen__content">
+                        <div class="content-volumen__column">
+                            <div class="content-volumen-column__row">
+                                <img src="assets/images/testiculo.png" alt="testiculo">
+                                <label>
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Testículo" id="0">
+                                    Testículo
+                                </label>
+                            </div>
+                        </div>
+                        <div class="content-volumen__column">
+                            <div class="content-volumen-column__row">
+                                <img src="assets/images/prostata.png" alt="prostata">
+                                <label>
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Próstata" id="0">
+                                    Próstata
+                                </label>
+                            </div>
+                            <div class="content-volumen-column__row">
+                                <img src="assets/images/tiroides.png" alt="tiroides">
+                                <label>
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Tiroides" id="0">
+                                    Tiroides
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="section-volumen__article">
+                <label class="calculator-title">Medidas</label>
+                <div class="article-volumen__border">
+                    <div class="article-volumen__content">
+                        <div class="content-volumen__row">
+                            <label>Longitud:</label>
+                            <input type="number" name="medidas" id="longitud">
+                            <label>cm.</label>
+                        </div>
+                        <div class="content-volumen__row">
+                            <label>Alto:</label>
+                            <input type="number" name="" id="alto">
+                            <label>cm.</label>
+                        </div>
+                        <div class="content-volumen__row">
+                            <label>Ancho:</label>
+                            <input type="number" name="" id="ancho">
+                            <label>cm.</label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-volumen__section">
+            <article class="section-tirads__article-puntaje">
+                <label class="calculator-title">Puntaje total</label>
+                <div class="article-tirads__border-puntaje">
+                    <div class="article-tirads__content-puntaje">
+                        <div class="content-tirads__column-puntaje" id="valorDefecto">
+                            <h2>
+                                Seleccione un valor ...
+                            </h2>
+                        </div>
+                        <div class="content-tirads__column-puntaje" id="volumenTesticular">
+                            <h2>
+                                <img src="assets/images/testiculo.png" alt="testiculo">
+                                Testículo
+                            </h2>
+                            <h3>
+                                Valores Referenciales
+                            </h3>
+                            <p>
+                                <ul class="valoresReferenciales">
+                                    <li>El volumen testicular normal en niños menores de 6 años es de aproximadamente 0,3 ml.</li>
+                                    <li>El volumen testicular normal en adultos es de aproximadamente 18-20 ml.</li>
+                                    <li>Criterios para el varicocele: Venas tortuosas dilatadas en el plexo pampiniforme con un diámetro mayor de 3 mm. La inversión del flujo en la maniobra de Valsalva en Doppler sugiere un grado más alto.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="content-tirads__column-puntaje" id="volumenProstatico">
+                            <h2>
+                                <img src="assets/images/prostata.png" alt="testiculo">
+                                Próstata
+                            </h2>
+                            <h3>
+                                Valores Referenciales
+                            </h3>
+                            <p class="">
+                                <ul class="valoresReferenciales">
+                                    <li>El volumen de la próstata superior a 30 cc / 30 g se considera anormal.</li>
+                                    <li>1cc próstata = 1 g de próstata. Así que la gente tiende a usarlos indistintamente. Yo sugeriría que uno debería atenerse al volumen (cc) ya que eso es lo que realmente estamos midiendo, no el peso.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="content-tirads__column-puntaje" id="volumenTiroidal">
+                            <h2>
+                                <img src="assets/images/tiroides.png" alt="testiculo">
+                                Tiroides
+                            </h2>
+                            <h3>
+                                Valores Referenciales
+                            </h3>
+                            <p class="">
+                                <ul class="valoresReferenciales">
+                                    <li>La longitud normal del lóbulo tiroideo es de 4-6 cm, mientras que el grosor (dimensión AP) es de ≤ 2 cm</li>
+                                    <li>El volumen normal de la tiroides adulta es ~10-15 cc.</li>
+                                    <li>Use la calculadora TIRADS para calcular la puntuación TIRADS para los nódulos tiroideos.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="content-tirads__column-text">
+                            <h2>
+                                Resultado sugerido: 
+                            </h2>
+                            <textarea name="" id="resultadoTirads" cols="" rows="" readonly></textarea>
+                            <div class="content-btn">
+                                <a class="btn-copy" id="btnCopy">
+                                    Copiar resultado
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">

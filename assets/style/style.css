@@ -1285,19 +1285,19 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
     margin: 5px 0;
 }
 
-.main-tirads__section {
+.main-tirads__section, .main-volumen__section {
     display: flex;
     margin-bottom: 20px;
 }
 
-.section-tirads__article {
+.section-tirads__article, .section-volumen__article {
     margin: 0 70px;
     min-width: 480px;
     width: 50%;
     text-align: center;
 }
 
-.section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title {
+.section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title, .section-volumen__article .calculator-title {
     background-color: #FFFFFF;
     display: inline;
     font-size: 1.7em;
@@ -1306,7 +1306,7 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
     top: 20px;
 }
 
-.article-tirads__border, .article-tirads__border-puntaje {
+.article-tirads__border, .article-tirads__border-puntaje, .article-volumen__border, .article-volumen__border-puntaje {
     border: 5px solid #000000;
     border-radius: 8px;
     min-width: 480px;
@@ -1355,7 +1355,7 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
     justify-items: space-between;
 }
 
-.content-tirads__row {
+.content-tirads__row, .content-volumen__row {
     margin: 47px 0;
     padding: 5px;
     position: relative;
@@ -1363,7 +1363,7 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
     justify-content: space-between;
 }
 
-.content-tirads__row label {
+.content-tirads__row label, .content-volumen__row label {
     font-size: 1.2em;
     line-height: 40px;
     padding: 5px;
@@ -1371,14 +1371,14 @@ input[id="3"]:checked ~ .pagination .pagination__item[for="3"] {
     width: 30%;
 }
 
-.content-tirads__row input {
+.content-tirads__row input, .content-volumen__row input {
     text-align: center;
     font-size: 1.05em;
     min-width: 30%;
     max-width: 45%;
 }
 
-.content-tirads__row input:hover, .content-tirads__row input:focus {
+.content-tirads__row input:hover, .content-tirads__row input:focus, .content-volumen__row input:hover, .content-volumen__row input:focus {
     border: 2px solid rgba(var(--primary_color-rgb),0.4);
     box-shadow: rgba(var(--primary_color-rgb),0.2) 0px 7px 29px 0px;
 }
@@ -1480,7 +1480,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 20px 5px 10px;
 }
 
-.section-tirads__article-puntaje {
+.section-tirads__article-puntaje, .section-volumen__article-puntaje {
     margin: 0 70px;
     width: 100%;
     text-align: center;
@@ -1636,20 +1636,20 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 0 20px;
     }
 
-    .section-tirads__article {
+    .section-tirads__article, .section-volumen__article {
     margin: 0 20px;
     min-width: 300px;
     width: 50%;
     text-align: center;
     }
 
-    .article-tirads__border, .article-tirads__border-puntaje {
+    .article-tirads__border, .article-tirads__border-puntaje, .article-volumen__border, .article-volumen__border-puntaje {
         border: 5px solid #000000;
         border-radius: 8px;
         min-width: 300px;
     }
 
-    .section-tirads__article-puntaje {
+    .section-tirads__article-puntaje, .section-volumen__article-puntaje {
         margin: 0 20px;
     }
 
@@ -1657,7 +1657,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 2em;
     }
     
-    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title {
+    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title, .section-volumen__article .calculator-title, .section-volumen__article-puntaje .calculator-title {
         font-size: 1.5em;
         top: 16px;
     }
@@ -1670,7 +1670,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: .8em;
     }
     
-    .content-tirads__row label {
+    .content-tirads__row label, .content-volumen__row label {
         font-size: 1.05em;
     }
     
@@ -1708,11 +1708,11 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 0;
     }
 
-    .main-tirads__section {
+    .main-tirads__section, .main-volumen__section {
         display: block;
     }
 
-    .section-tirads__article, .section-tirads__article-puntaje {
+    .section-tirads__article, .section-tirads__article-puntaje, .section-volumen__article, .section-volumen__article-puntaje {
         width: 100%;
         margin: 0;
     }
@@ -1722,7 +1722,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 0;
     }
     
-    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title {
+    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title, .section-volumen__article .calculator-title, .section-volumen__article-puntaje .calculator-title {
         font-size: 1.4em;
         margin-top: 5px;
         padding: 0 20px;
@@ -1741,11 +1741,11 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 0 5px;
     }
     
-    .content-tirads__row {
+    .content-tirads__row, .content-volumen__row {
         margin: 35px 0;
     }
     
-    .content-tirads__row label {
+    .content-tirads__row label, .content-volumen__row {
         line-height: 30px;
     }
     
@@ -1798,7 +1798,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     
-    .section-tirads__article-puntaje {
+    .section-tirads__article-puntaje, .section-volumen__article-puntaje {
         margin: 0;
     }
     
@@ -1834,7 +1834,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     
-    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title {
+    .section-tirads__article .calculator-title, .section-tirads__article-puntaje .calculator-title, .section-volumen__article .calculator-title, .section-volumen__article-puntaje .calculator-title {
         font-size: 1.2em;
     }
 
@@ -2109,3 +2109,64 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
+/* VOLUMEN RADIOLOGICO */
+
+#valorDefecto {
+    display: none;
+}
+
+#volumenTesticular {
+    /* display: none; */
+}
+
+#volumenProstatico {
+    display: none;
+}
+
+#volumenTiroidal {
+    display: none;
+}
+
+.article-volumen__content {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    padding: 1em;
+}
+
+.content-volumen__column {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-volumen-column__row {
+    padding: 1em;
+    position: relative;
+}
+
+.content-volumen-column__row img {
+    min-width: 55%;
+    top: 0;
+}
+
+.content-volumen-column__row label {
+    position: relative;
+    display: block;
+}
+
+.content-volumen__row {
+    margin: 1em;
+}
+
+.valoresReferenciales {
+    text-align: start;
+    margin: 10px 5vw;
+}
+
+@media screen and (max-width: 920px) {
+    .valoresReferenciales {
+        text-align: start;
+        margin: 10px 80px;
+    }
+}
