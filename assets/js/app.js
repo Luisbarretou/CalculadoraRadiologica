@@ -232,7 +232,7 @@ btnCopy?.addEventListener('click', () => {
 });
 
 
-//PIRADS
+/* PIRADS */
 function uncheckPeriferica () {
     let radioPeriferica = document.querySelectorAll("input[name='radioDWI']");
     radioPeriferica.forEach(btn => {
@@ -287,7 +287,7 @@ function contrasteDinamicoT2wi() {
     document.getElementById('contrasteDinamico').style.display = 'block';
 };
 
-/*CÁLCULO PIRADS */
+//CÁLCULO PIRADS
 let btnResultPirads = document.querySelector("#btnResultPirads");
 let lblDwiPuntos = document.getElementById("DWIPuntos");
 let lblT2wiPuntos = document.getElementById("T2WIPuntos");
@@ -383,4 +383,73 @@ let resultCopyPirads = () => {
 btnCopyPirads?.addEventListener('click', () => {
     animationCopyResult();
     resultCopyPirads();
+});
+
+/* VOLUMEN RADIOLOGICO */
+
+function uncheckVolumenTesticular () {
+    document.getElementById('volumenTesticular').style.display = 'block';
+    document.getElementById('volumenProstatico').style.display = 'none';
+    document.getElementById('volumenTiroidal').style.display = 'none';
+    document.getElementById('valorDefecto').style.display = 'none';
+};
+
+function uncheckVolumenProstatico () {
+    document.getElementById('volumenTesticular').style.display = 'none';
+    document.getElementById('volumenProstatico').style.display = 'block';
+    document.getElementById('volumenTiroidal').style.display = 'none';
+    document.getElementById('valorDefecto').style.display = 'none';
+};
+
+function uncheckVolumenTiroidal () {
+    document.getElementById('volumenTesticular').style.display = 'none';
+    document.getElementById('volumenProstatico').style.display = 'none';
+    document.getElementById('volumenTiroidal').style.display = 'block';
+    document.getElementById('valorDefecto').style.display = 'none';
+};
+
+//CALCULO VOLUMEN
+let resultadoVolumen = document.querySelector("#resultadoVolumen");
+let btnResultVolumen= document.querySelector("#btnResultVolumen");
+let btnCopyVolumen = document.querySelector("#btnCopyVolumen");
+
+let resultSelectVolumen = () => {
+    let longitud = document.querySelector("#longitud");
+    let alto = document.querySelector("#alto");
+    let ancho = document.querySelector("#ancho");
+    let radioVolumen = document.querySelector("input[name='radioVolumen']:checked");
+    let volumen;
+    let resultado;
+
+    if(radioVolumen) {
+        animationGenerateResult();
+        if(radioVolumen.id == 1){
+            volumen = "Volumen Radiológico Testículo: " +longitud.value * alto.value * ancho.value* 0.71+ "cc ,midiendo " + longitud.value + " cm de longitud x " + alto.value + " cm de alto x " + ancho.value + " cm de ancho. ";
+        } else if(radioVolumen.id == 2){
+            volumen = "Volumen Radiológico Próstata: " +longitud.value * alto.value * ancho.value* 0.523+ "cc ,midiendo " + longitud.value + " cm de longitud x " + alto.value + " cm de alto x " + ancho.value + " cm de ancho. ";
+        } else {
+            volumen = "Volumen Radiológico Tiroides: " +longitud.value * alto.value * ancho.value* 0.523+ "cc, midiendo " + longitud.value + " cm de longitud x " + alto.value + " cm de alto x " + ancho.value + " cm de ancho. ";
+        }
+    } else {
+        animationErrorMessage('Seleccione un tipo para el volumen');
+        volumen = 'Ninguna opción seleccionada';
+    }
+    resultadoVolumen.innerHTML = volumen;
+};
+
+btnResultVolumen?.addEventListener('click', () => {
+    resultSelectVolumen();
+});
+
+//Copy Result
+let resultCopyVolumen = () => {
+    let result = document.getElementById("resultadoVolumen");
+    result.select();
+    result.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+};
+
+btnCopyVolumen?.addEventListener('click', () => {
+    animationCopyResult();
+    resultCopyVolumen();
 });

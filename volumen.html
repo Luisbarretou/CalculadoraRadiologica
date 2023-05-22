@@ -100,8 +100,8 @@
                         <div class="content-volumen__column">
                             <div class="content-volumen-column__row">
                                 <img src="assets/images/testiculo.png" alt="testiculo">
-                                <label>
-                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Testículo" id="0">
+                                <label onclick="uncheckVolumenTesticular()">
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Testículo" id="1">
                                     Testículo
                                 </label>
                             </div>
@@ -109,15 +109,15 @@
                         <div class="content-volumen__column">
                             <div class="content-volumen-column__row">
                                 <img src="assets/images/prostata.png" alt="prostata">
-                                <label>
-                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Próstata" id="0">
+                                <label onclick="uncheckVolumenProstatico()">
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Próstata" id="2">
                                     Próstata
                                 </label>
                             </div>
                             <div class="content-volumen-column__row">
                                 <img src="assets/images/tiroides.png" alt="tiroides">
-                                <label>
-                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Tiroides" id="0">
+                                <label onclick="uncheckVolumenTiroidal()">
+                                    <input class="radio-input" type="radio" name="radioVolumen" value="Volumen de Tiroides" id="3">
                                     Tiroides
                                 </label>
                             </div>
@@ -148,6 +148,11 @@
                 </div>
             </article>
         </section>
+        <div class="content-btn">
+            <a class="btn-generate" id="btnResultVolumen">
+                Generar resultado
+            </a>
+        </div>
         <section class="main-volumen__section">
             <article class="section-tirads__article-puntaje">
                 <label class="calculator-title">Puntaje total</label>
@@ -209,9 +214,9 @@
                             <h2>
                                 Resultado sugerido: 
                             </h2>
-                            <textarea name="" id="resultadoTirads" cols="" rows="" readonly></textarea>
+                            <textarea name="" id="resultadoVolumen" cols="" rows="" readonly></textarea>
                             <div class="content-btn">
-                                <a class="btn-copy" id="btnCopy">
+                                <a class="btn-copy" id="btnCopyVolumen">
                                     Copiar resultado
                                 </a>
                             </div>
@@ -256,5 +261,8 @@
 
     <!--FontAwesome 6.2.1-->
     <script src="assets/fontawesome-6.2.1/js/all.js"></script>
+
+    <!--Sweet alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

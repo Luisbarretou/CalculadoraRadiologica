@@ -2112,11 +2112,11 @@ input[type=number]::-webkit-outer-spin-button {
 /* VOLUMEN RADIOLOGICO */
 
 #valorDefecto {
-    display: none;
+    /* display: none; */
 }
 
 #volumenTesticular {
-    /* display: none; */
+    display: none;
 }
 
 #volumenProstatico {
@@ -2153,6 +2153,11 @@ input[type=number]::-webkit-outer-spin-button {
 .content-volumen-column__row label {
     position: relative;
     display: block;
+}
+
+.content-tirads__column-puntaje h2 img{
+    display: block;
+    margin: auto;
 }
 
 .content-volumen__row {
